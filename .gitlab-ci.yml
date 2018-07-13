@@ -1,0 +1,7 @@
+py36:
+  image: python:3.6
+  script:
+    - apt-get update -q -y
+    - pip install -r requirements.txt
+    - cd hagelkorn
+    - python -m unittest -v
