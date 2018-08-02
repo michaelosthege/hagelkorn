@@ -6,7 +6,7 @@ import timeit
 
 class TestHagelkorn(unittest.TestCase):
     def test_key_length(self):
-        
+
         D, K, T = hagelkorn.core.key_length(
             overflow_years=1,
             resolution=hagelkorn.Resolution.days,
@@ -75,7 +75,7 @@ class TestHagelSource(unittest.TestCase):
         id = hs.monotonic(now=datetime.datetime(2018, 12, 31, 23, 59, 59))
 
         assert len(id) == hs.digits
-        assert id == '999'        
+        assert id == '999'
         return
 
     def test_t_0(self):

@@ -94,7 +94,7 @@ class HagelSource(object):
 
         Arguments:
             now (datetime): timpoint at which the ID is generated
-            
+
         Returns:
             id (str)
         """
@@ -106,7 +106,7 @@ class HagelSource(object):
 
         return base(elapsed_intervals, self.alphabet, self.digits)
 
-    
+
 def monotonic(resolution=Resolution.seconds,
         now:datetime.datetime=None,
         alphabet=DEFAULT_ALPHABET,
@@ -134,7 +134,7 @@ def monotonic(resolution=Resolution.seconds,
     # find parameters
     B = len(alphabet)
     digits, combinations, resolution = key_length(overflow_years, resolution, B)
-    
+
     # find the interval number
     elapsed_seconds = (now.astimezone(datetime.timezone.utc) - start).total_seconds()
     elapsed_intervals = int(elapsed_seconds / resolution)
