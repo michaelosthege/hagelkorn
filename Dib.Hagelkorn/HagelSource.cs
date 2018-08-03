@@ -8,7 +8,7 @@ namespace Dib.Hagelkorn
     /// </summary>
     public class HagelSource
     {
-        public const string DEFAULT_ALPHABET = "0123456789ABCDEFHKLMNPQRTWXY";
+        public const string DEFAULT_ALPHABET = "13456789ABCDEFHKLMNPQRTWXYZ";
         public readonly DateTime DEFAULT_START = new DateTime(2018, 1, 1, 0, 0, 0, DateTimeKind.Utc);
         private static Random rnd = new Random();
 

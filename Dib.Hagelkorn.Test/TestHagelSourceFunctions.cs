@@ -23,8 +23,8 @@ namespace Dib.Hagelkorn.Test
             (int D2, long K2, double T2) = HagelSource.KeyLength(
                                             overflow_years: 30,
                                             resolution: Resolution.Days,
-                                            B: 28);
-            Assert.AreEqual(Math.Pow(28, D2), K2);
+                                            B: 27);
+            Assert.AreEqual(Math.Pow(27, D2), K2);
             Assert.IsTrue(T2 < Resolution.Days);
         }
 

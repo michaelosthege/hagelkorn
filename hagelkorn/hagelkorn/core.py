@@ -3,7 +3,7 @@ import datetime
 import enum
 import random as rnd
 
-DEFAULT_ALPHABET = '0123456789ABCDEFHKLMNPQRTWXY'
+DEFAULT_ALPHABET = '13456789ABCDEFHKLMNPQRTWXYZ'
 
 
 class Resolution(object):

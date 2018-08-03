@@ -18,8 +18,8 @@ class TestHagelkorn(unittest.TestCase):
         D, K, T = hagelkorn.core.key_length(
             overflow_years=30,
             resolution=hagelkorn.Resolution.days,
-            B=28)
-        assert K == 28**D
+            B=27)
+        assert K == 27**D
         assert T < hagelkorn.Resolution.days
 
         return
