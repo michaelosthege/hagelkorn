@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <RootNamespace>Dib.Hagelkorn.Tests</RootNamespace>
+
+    <AssemblyName>Dib.Hagelkorn.Tests</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

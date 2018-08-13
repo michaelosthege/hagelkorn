@@ -12,7 +12,7 @@ python-build:
 
 python-test:
   stage: test
-  image: python3.6
+  image: python:3.6
   script:
     - apt-get update -q -y
     - pip install -r requirements.txt
@@ -29,5 +29,5 @@ dotnet-test:
   stage: test
   image: microsoft/dotnet
   script:
-    - cd Dib.Utils.Tests
+    - cd Dib.Hagelkorn.Tests
     - dotnet test

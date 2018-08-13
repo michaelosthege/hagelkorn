@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dib.Hagelkorn", "Dib.Hagelkorn\Dib.Hagelkorn.csproj", "{B5F2F4F9-EA30-41DE-BA00-0C963F1D6882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dib.Hagelkorn.Test", "Dib.Hagelkorn.Test\Dib.Hagelkorn.Test.csproj", "{874D9203-51CD-46E4-B04C-E6F7D60D7AFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dib.Hagelkorn.Tests", "Dib.Hagelkorn.Tests\Dib.Hagelkorn.Tests.csproj", "{874D9203-51CD-46E4-B04C-E6F7D60D7AFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
