@@ -82,7 +82,7 @@ class TestHagelSource(unittest.TestCase):
         hs = hagelkorn.HagelSource()
         first = hs.monotonic(now=hs.start)
         assert set(first) == set(hs.alphabet[0]), 'ID at start time was expected to be all {} but' \
-            ' the monotonicd ID was {}'.format(alphabet[0], first)
+            ' the monotonicd ID was {}'.format(hs.alphabet[0], first)
         return
 
     def test_t_overflow(self):
