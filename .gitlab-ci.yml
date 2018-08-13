@@ -1,7 +1,33 @@
-py36:
+stages:
+  - build
+  - test
+  - deploy
+
+python-build:
+  stage: build
   image: python:3.6
+  script:
+    - apt-get update -q -y
+    - pip install -r requirements.txt
+
+python-test:
+  stage: test
+  image: python3.6
   script:
     - apt-get update -q -y
     - pip install -r requirements.txt
     - cd hagelkorn
     - python -m unittest -v
+
+dotnet-build:
+  stage: build
+  image: microsoft/dotnet
+  script:
+    - dotnet build
+
+dotnet-test:
+  stage: test
+  image: microsoft/dotnet
+  script:
+    - cd Dib.Utils.Tests
+    - dotnet test
