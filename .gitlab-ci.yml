@@ -3,21 +3,28 @@ stages:
   - test
   - release
 
-python-build:
-  stage: build
-  image: python:3.6
-  script:
-    - apt-get update -q -y
-    - pip install -r requirements.txt
 
 python-test:
   stage: test
   image: python:3.6
   script:
-    - apt-get update -q -y
-    - pip install -r requirements.txt
     - cd hagelkorn
     - python -m unittest -v
+
+python-release:
+  stage: release
+  image: python:3.6
+  script:
+    - cd hagelkorn
+    - python setup.py bdist_wheel
+  artifacts:
+    paths:
+      - /hagelkorn/dist/*.whl
+  only:
+    - tags
+  only:
+    - master
+
 
 dotnet-build:
   stage: build
