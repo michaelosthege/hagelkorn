@@ -17,7 +17,7 @@ python-release:
   script:
     - cd hagelkorn
     - python setup.py bdist_wheel
-    - cp /dist/*.whl ..
+    - cp dist/*.whl ..
   artifacts:
     paths:
       - /builds/diginbio-fzj/hagelkorn/*.whl
@@ -45,7 +45,7 @@ dotnet-release:
   image: microsoft/dotnet
   script:
     - dotnet build --configuration Release
-    - cp /Dib.Hagelkorn/bin/Release/*.nupkg .
+    - cp Dib.Hagelkorn/bin/Release/*.nupkg .
   artifacts:
     paths:
       - /builds/diginbio-fzj/hagelkorn/*.nupkg
