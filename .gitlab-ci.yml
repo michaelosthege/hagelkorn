@@ -1,7 +1,7 @@
 stages:
   - build
   - test
-  - deploy
+  - release
 
 python-build:
   stage: build
@@ -31,3 +31,16 @@ dotnet-test:
   script:
     - cd Dib.Hagelkorn.Tests
     - dotnet test
+
+dotnet-release:
+  stage: release
+  image: microsoft/dotnet
+  script:
+    - dotnet build --configuration Release
+  artifacts:
+    paths:
+      - /Dib.Hagelkorn/bin/Release/*.nupkg
+  only:
+    - tags
+  only:
+    - master
