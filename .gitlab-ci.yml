@@ -19,7 +19,7 @@ python-release:
     - python setup.py bdist_wheel
   artifacts:
     paths:
-      - /hagelkorn/dist/*.whl
+      - /builds/diginbio-fzj/hagelkorn/hagelkorn/dist/*.whl
   only:
     - tags
   only:
@@ -46,7 +46,7 @@ dotnet-release:
     - dotnet build --configuration Release
   artifacts:
     paths:
-      - /Dib.Hagelkorn/bin/Release/*.nupkg
+      - /builds/diginbio-fzj/hagelkorn/Dib.Hagelkorn/bin/Release/*.nupkg
   only:
     - tags
   only:
