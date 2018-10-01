@@ -20,11 +20,12 @@ python-release:
     - cp dist/*.whl ..
   artifacts:
     paths:
-      - /builds/diginbio-fzj/hagelkorn/*.whl
+      - ./*.whl
   only:
-    - tags
-  only:
-    - master
+    # only run on refs that are named like v1.2 or v1.2.3
+    - /^v(\d+\.)?(\d+\.)?(\*|\d+)$/
+  except:
+    - branches
 
 
 dotnet-build:
@@ -48,8 +49,9 @@ dotnet-release:
     - cp Dib.Hagelkorn/bin/Release/*.nupkg .
   artifacts:
     paths:
-      - /builds/diginbio-fzj/hagelkorn/*.nupkg
+      - ./*.nupkg
   only:
-    - tags
-  only:
-    - master
+    # only run on refs that are named like v1.2 or v1.2.3
+    - /^v(\d+\.)?(\d+\.)?(\*|\d+)$/
+  except:
+    - branches
