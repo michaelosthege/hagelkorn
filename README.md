@@ -21,3 +21,14 @@ hagelkorn.monotonic()
 hagelkorn.monotonic(resolution=0.1, overflow_years=5)
 > '2Y38H6C'
 ```
+
+## Installation
+### Python
++ [v1.1](https://gitlab.com/diginbio-fzj/hagelkorn/-/jobs/artifacts/v1.1/download?job=python-release)
+
+```bash
+pip install hagelkorn-1.1-py3-none-any.whl
+```
+
+### C#
++ [v1.1](https://gitlab.com/diginbio-fzj/hagelkorn/-/jobs/artifacts/v1.1/download?job=dotnet-release)
