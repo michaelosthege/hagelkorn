@@ -23,12 +23,20 @@ hagelkorn.monotonic(resolution=0.1, overflow_years=5)
 ```
 
 ## Installation
+
+
+1. Got to [Repository/Tags](https://gitlab.com/diginbio-fzj/hagelkorn/tags) to view the
+   list of releases & their release notes.
+2. Click the _download_ button on the right
+
+![Release Download](docs/ReleaseDownload.png)
+
 ### Python
-+ [v1.1](https://gitlab.com/diginbio-fzj/hagelkorn/-/jobs/artifacts/v1.1/download?job=python-release)
+Download the `python-release` artifact, unpack the `*.whl*  and install via pip:
 
 ```bash
-pip install hagelkorn-1.1-py3-none-any.whl
+pip install hagelkorn-x.x-py3-none-any.whl
 ```
 
 ### C#
-+ [v1.1](https://gitlab.com/diginbio-fzj/hagelkorn/-/jobs/artifacts/v1.1/download?job=dotnet-release)
+Download the `dotnet-release` artifact, that contains the NuGet package.
