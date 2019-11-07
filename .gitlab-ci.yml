@@ -21,6 +21,7 @@ python-release:
   artifacts:
     paths:
       - ./*.whl
+    expire_in: 30 yrs
   only:
     # only run on refs that are named like v1.2 or v1.2.3
     - /^v(\d+\.)?(\d+\.)?(\*|\d+)$/
@@ -50,6 +51,7 @@ dotnet-release:
   artifacts:
     paths:
       - ./*.nupkg
+    expire_in: 30 yrs
   only:
     # only run on refs that are named like v1.2 or v1.2.3
     - /^v(\d+\.)?(\d+\.)?(\*|\d+)$/
