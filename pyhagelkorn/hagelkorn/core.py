@@ -1,5 +1,4 @@
 import datetime
-import enum
 import random as rnd
 import typing
 
@@ -68,7 +67,8 @@ def base(n: float, alphabet: str, digits: int) -> str:
     Returns
     -------
     id : str
-        Length may exceed the specified number of digits if n results in an overflow
+        Length may exceed the specified number of digits
+        if n results in an overflow
     """
     B = len(alphabet)
     output = ""
@@ -117,7 +117,8 @@ class HagelSource:
 
     def monotonic(self, now: typing.Optional[datetime.datetime] = None) -> str:
         """
-        Generates a short, human-readable ID that increases monotonically with time.
+        Generates a short, human-readable ID that
+        increases monotonically with time.
 
         Parameters
         ----------
@@ -129,7 +130,7 @@ class HagelSource:
         id : str
             The generated hagelkorn
         """
-        if now == None:
+        if now is None:
             now = datetime.datetime.utcnow()
 
         elapsed_seconds = (
@@ -150,7 +151,8 @@ def monotonic(
     overflow_years: float = 10,
 ) -> str:
     """
-    Generates a short, human-readable ID that increases monotonically with time.
+    Generates a short, human-readable ID that
+    increases monotonically with time.
 
     Parameters
     ----------
@@ -172,16 +174,16 @@ def monotonic(
     """
     # clean up input arguments
     start = start.astimezone(datetime.timezone.utc)
-    if now == None:
+    if now is None:
         now = datetime.datetime.utcnow()
 
     # find parameters
     B = len(alphabet)
-    digits, combinations, resolution = key_length(overflow_years, resolution, B)
+    digits, combis, resolution = key_length(overflow_years, resolution, B)
 
     # find the interval number
-    elapsed_seconds = (now.astimezone(datetime.timezone.utc) - start).total_seconds()
-    elapsed_intervals = int(elapsed_seconds / resolution)
+    elapsed_s = (now.astimezone(datetime.timezone.utc) - start).total_seconds()
+    elapsed_intervals = int(elapsed_s / resolution)
 
     # encode
     return base(elapsed_intervals, alphabet, digits)
