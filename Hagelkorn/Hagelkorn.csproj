@@ -26,4 +26,8 @@
     <DocumentationFile>C:\Users\osthege\Repos\hagelkorn\Hagelkorn\Hagelkorn.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Hagelkorn.xml" />
+  </ItemGroup>
+
 </Project>

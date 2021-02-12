@@ -262,3 +262,6 @@ __pycache__/
 */build/lib/hagelkorn
 */dist
 *.egg-info
+
+# No need to commit the generated docstring XML
+/Hagelkorn/Hagelkorn.xml
