@@ -9,7 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitlab-ci.yml = .gitlab-ci.yml
 		README.md = README.md
-		requirements.txt = requirements.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hagelkorn", "Hagelkorn\Hagelkorn.csproj", "{B5F2F4F9-EA30-41DE-BA00-0C963F1D6882}"
