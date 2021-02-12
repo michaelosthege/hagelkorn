@@ -7,13 +7,18 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "pyhagelkorn", "pyhagelkorn\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1813558-B955-41CA-8751-C02C696BFBDE}"
 	ProjectSection(SolutionItems) = preProject
-		.gitlab-ci.yml = .gitlab-ci.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hagelkorn", "Hagelkorn\Hagelkorn.csproj", "{B5F2F4F9-EA30-41DE-BA00-0C963F1D6882}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hagelkorn.Tests", "Hagelkorn.Tests\Hagelkorn.Tests.csproj", "{874D9203-51CD-46E4-B04C-E6F7D60D7AFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{9E0CD207-B9D1-4A71-B344-FED1E2F98283}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\pipeline.yml = .github\workflows\pipeline.yml
+		.github\workflows\release.yml = .github\workflows\release.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +39,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E0CD207-B9D1-4A71-B344-FED1E2F98283} = {D1813558-B955-41CA-8751-C02C696BFBDE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A3B2E33A-22D5-49F2-B52E-5FB088B430D0}

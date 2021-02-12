@@ -1,0 +1,66 @@
+name: release-pipeline
+
+on:
+  release:
+    types:
+      - created
+
+
+jobs:
+  release-pypi:
+    runs-on: ubuntu-latest
+    env:
+      PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        cd pyhagelkorn
+        pip install -e . 
+        pip install flake8 pytest pytest-cov twine wheel
+    - name: Test with pytest
+      run: |
+        cd pyhagelkorn
+        pytest --cov=./hagelkorn --cov-append --cov-report xml --cov-report term-missing hagelkorn/tests.py
+    - name: Build package
+      run: |
+        cd pyhagelkorn
+        python setup.py sdist bdist_wheel
+    - name: Check version number match
+      run: |
+        cd pyhagelkorn
+        echo "GITHUB_REF: ${GITHUB_REF}"
+        # Make sure the package version is the same as the tag
+        grep -Rq "^Version: ${GITHUB_REF:11}$" hagelkorn.egg-info/PKG-INFO
+    - name: Publish to PyPI
+      run: |
+        cd pyhagelkorn
+        twine check dist/*
+        twine upload --repository pypi --username __token__ --password ${PYPI_TOKEN} dist/*
+    - name: Test installation
+      run: |
+        sleep 120
+        pip install hagelkorn==${GITHUB_REF:11}
+  release-nuget:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Run tests
+      run: dotnet test
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: Publish Hagelkorn
+      uses: brandedoutcast/publish-nuget@v2
+      with:
+          PROJECT_FILE_PATH: Hagelkorn/Hagelkorn.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          NUGET_SOURCE: https://api.nuget.org
+          INCLUDE_SYMBOLS: true

@@ -1,3 +1,8 @@
+[![PyPI version](https://badge.fury.io/py/hagelkorn.svg)](https://badge.fury.io/py/hagelkorn)
+![Nuget](https://img.shields.io/nuget/v/hagelkorn)
+[![pipeline](https://github.com/michaelosthege/hagelkorn/workflows/pipeline/badge.svg)](https://github.com/michaelosthege/hagelkorn/actions)
+[![coverage](https://codecov.io/gh/michaelosthege/hagelkorn/branch/master/graph/badge.svg)](https://codecov.io/gh/michaelosthege/hagelkorn)
+
 # Hagelkorn
 This is a package for generating human-readable and human-memorable IDs.
 
@@ -23,20 +28,10 @@ hagelkorn.monotonic(resolution=0.1, overflow_years=5)
 ```
 
 ## Installation
-
-
-1. Got to [Repository/Tags](https://github.com/michaelosthege/hagelkorn/releases) to view the
-   list of releases & their release notes.
-2. Click the _download_ button on the right
-
-![Release Download](docs/ReleaseDownload.png)
-
-### Python
-Download the `python-release` artifact, unpack the `*.whl*  and install via pip:
+The Python version is available [on PyPI](https://pypi.org/packages/hagelkorn):
 
 ```bash
-pip install hagelkorn-x.x-py3-none-any.whl
+pip install hagelkorn
 ```
 
-### C#
-Download the `dotnet-release` artifact, that contains the NuGet package.
+The C#/.NET Standard package is available [on NuGet](https://nuget.org/packages/Hagelkorn).
