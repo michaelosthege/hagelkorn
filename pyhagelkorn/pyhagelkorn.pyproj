@@ -5,7 +5,7 @@
     <ProjectGuid>fb6fab3c-98f7-4579-8eef-da8da24ff6a6</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>tests.py</StartupFile>
+    <StartupFile>hagelkorn\tests.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,7 +30,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="setup.py" />
-    <Compile Include="tests.py">
+    <Compile Include="hagelkorn\tests.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
