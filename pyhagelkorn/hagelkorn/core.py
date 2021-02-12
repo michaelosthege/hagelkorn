@@ -1,11 +1,12 @@
 import datetime
 import enum
 import random as rnd
+import typing
 
 DEFAULT_ALPHABET = "13456789ABCDEFHKLMNPQRTWXYZ"
 
 
-class Resolution(object):
+class Resolution:
     """Helper type for specifying minimum time resolutions."""
 
     microseconds = 1e-6
@@ -16,7 +17,9 @@ class Resolution(object):
     days = 86400
 
 
-def key_length(overflow_years: float, resolution: float, B: int):
+def key_length(
+    overflow_years: float, resolution: float, B: int
+) -> typing.Tuple[int, int, float]:
     """
     Determines some key parameters for ID generation.
 
@@ -41,7 +44,7 @@ def key_length(overflow_years: float, resolution: float, B: int):
     return D, K, T
 
 
-def base(n: float, alphabet: str, digits: int):
+def base(n: float, alphabet: str, digits: int) -> str:
     """
     Converts a real-valued number into its baseN-notation.
 
@@ -61,15 +64,17 @@ def base(n: float, alphabet: str, digits: int):
     return output[::-1].rjust(digits, alphabet[0])
 
 
-class HagelSource(object):
+class HagelSource:
     """An ID-generator that exposes some internal parameters."""
 
     def __init__(
         self,
-        resolution=Resolution.seconds,
-        alphabet=DEFAULT_ALPHABET,
-        start=datetime.datetime(2018, 1, 1, tzinfo=datetime.timezone.utc),
-        overflow_years=10,
+        resolution: float = Resolution.seconds,
+        alphabet: str = DEFAULT_ALPHABET,
+        start: datetime.datetime = datetime.datetime(
+            2018, 1, 1, tzinfo=datetime.timezone.utc
+        ),
+        overflow_years: float = 10,
     ):
         """Creates an ID-generator that is slightly faster and a bit more transparent.
 
@@ -89,9 +94,9 @@ class HagelSource(object):
             overflow_years, resolution, self.B
         )
 
-        return super().__init__()
+        super().__init__()
 
-    def monotonic(self, now=None):
+    def monotonic(self, now: typing.Optional[datetime.datetime] = None) -> str:
         """
         Generates a short, human-readable ID that increases monotonically with time.
 
@@ -113,12 +118,14 @@ class HagelSource(object):
 
 
 def monotonic(
-    resolution=Resolution.seconds,
-    now: datetime.datetime = None,
-    alphabet=DEFAULT_ALPHABET,
-    start=datetime.datetime(2018, 1, 1, tzinfo=datetime.timezone.utc),
-    overflow_years=10,
-):
+    resolution: float = Resolution.seconds,
+    now: typing.Optional[datetime.datetime] = None,
+    alphabet: str = DEFAULT_ALPHABET,
+    start: datetime.datetime = datetime.datetime(
+        2018, 1, 1, tzinfo=datetime.timezone.utc
+    ),
+    overflow_years: float = 10,
+) -> str:
     """
     Generates a short, human-readable ID that increases monotonically with time.
 
@@ -149,7 +156,7 @@ def monotonic(
     return base(elapsed_intervals, alphabet, digits)
 
 
-def random(digits: int = 5, alphabet: str = DEFAULT_ALPHABET):
+def random(digits: int = 5, alphabet: str = DEFAULT_ALPHABET) -> str:
     """
     Generates a random alphanumberic ID.
 
