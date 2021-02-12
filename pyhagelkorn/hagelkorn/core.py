@@ -23,15 +23,23 @@ def key_length(
     """
     Determines some key parameters for ID generation.
 
-    Arguments:
-        overflow_years (float): number of years after which the key length will be exceeded
-        resolution (float): maximum length of an interval (in seconds)
-        B (int): base of the positional notation (length of alphabet)
+    Parameters
+    ----------
+    overflow_years : float
+        Number of years after which the key length will be exceeded
+    resolution : float
+        Maximum length of an interval (in seconds)
+    B : int
+        Base of the positional notation (length of alphabet)
 
-    Returns:
-        D (int): number of digits of the ID
-        K (int): total number of unique IDs (intervals)
-        T (float): duration of one interval in seconds
+    Returns
+    -------
+    D : int
+        Number of digits of the ID
+    K : int
+        Total number of unique IDs (intervals)
+    T : float
+        Duration of one interval in seconds
     """
     total_seconds = overflow_years * 31536000
     K_min = total_seconds / resolution
@@ -48,13 +56,19 @@ def base(n: float, alphabet: str, digits: int) -> str:
     """
     Converts a real-valued number into its baseN-notation.
 
-    Arguments:
-        n (float): number to be converted (decimal precision will be droped)
-        alphabet (str): alphabet of the positional notation system
-        digits (int): number of digits in the ID
+    Parameters
+    ----------
+    n : float
+        Number to be converted (decimal precision will be droped)
+    alphabet : str
+        Alphabet of the positional notation system
+    digits : int
+        Number of digits in the ID
 
-    Returns:
-        id (str): length may exceed the specified number of digits if n results in an overflow
+    Returns
+    -------
+    id : str
+        Length may exceed the specified number of digits if n results in an overflow
     """
     B = len(alphabet)
     output = ""
@@ -78,11 +92,16 @@ class HagelSource:
     ):
         """Creates an ID-generator that is slightly faster and a bit more transparent.
 
-        Arguments:
-            resolution (float): maximum duration in seconds for an increment in the id
-            alphabet (str): the (sorted) characters to be used in the ID generation
-            start (datetime): beginning of timeline
-            overflow_years (float): number of years after which the key length will increase by 1
+        Parameters
+        ----------
+        resolution : float
+            Maximum duration in seconds for an increment in the id
+        alphabet : str
+            The (sorted) characters to be used in the ID generation
+        start : datetime
+            Beginning of timeline
+        overflow_years : float
+            Number of years after which the key length will increase by 1
         """
         self.alphabet = alphabet
         self.B = len(alphabet)
@@ -100,11 +119,15 @@ class HagelSource:
         """
         Generates a short, human-readable ID that increases monotonically with time.
 
-        Arguments:
-            now (datetime): timpoint at which the ID is generated
+        Parameters
+        ----------
+        now : datetime
+            Timpoint at which the ID is generated
 
-        Returns:
-            id (str)
+        Returns
+        -------
+        id : str
+            The generated hagelkorn
         """
         if now == None:
             now = datetime.datetime.utcnow()
@@ -129,15 +152,23 @@ def monotonic(
     """
     Generates a short, human-readable ID that increases monotonically with time.
 
-    Arguments:
-        resolution (float): maximum duration in seconds for an increment in the id
-        now (datetime): timpoint at which the ID is generated
-        alphabet (str): the (sorted) characters to be used in the ID generation
-        start (datetime): beginning of timeline
-        overflow_years (float): number of years after which the key length will increase by 1
+    Parameters
+    ----------
+    resolution : float
+        Maximum duration in seconds for an increment in the id
+    now : datetime
+        Timpoint at which the ID is generated
+    alphabet : str
+        The (sorted) characters to be used in the ID generation
+    start : datetime
+        Beginning of timeline
+    overflow_years : float
+        Number of years after which the key length will increase by 1
 
-    Returns:
-        id (str)
+    Returns
+    -------
+    id : str
+        The generated hagelkorn
     """
     # clean up input arguments
     start = start.astimezone(datetime.timezone.utc)
@@ -160,11 +191,16 @@ def random(digits: int = 5, alphabet: str = DEFAULT_ALPHABET) -> str:
     """
     Generates a random alphanumberic ID.
 
-    Arguments:
-        digits (int): length of the generated ID
-        alphabet (str): available characters for the ID
+    Parameters
+    ----------
+    digits : int
+        Length of the generated ID
+    alphabet : str
+        Available characters for the ID
 
-    Returns:
-        id (str)
+    Returns
+    -------
+    id : str
+        The generated hagelkorn
     """
     return "".join(rnd.choices(alphabet, k=digits))
