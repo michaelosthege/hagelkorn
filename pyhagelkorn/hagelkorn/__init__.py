@@ -1,3 +1,3 @@
 from .core import HagelSource, Resolution, monotonic, random
 
-__version__ = "1.2.0"
+__version__ = "1.2.1"
