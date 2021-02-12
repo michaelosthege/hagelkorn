@@ -25,7 +25,7 @@ hagelkorn.monotonic(resolution=0.1, overflow_years=5)
 ## Installation
 
 
-1. Got to [Repository/Tags](https://gitlab.com/diginbio-fzj/hagelkorn/tags) to view the
+1. Got to [Repository/Tags](https://github.com/michaelosthege/hagelkorn/releases) to view the
    list of releases & their release notes.
 2. Click the _download_ button on the right
 

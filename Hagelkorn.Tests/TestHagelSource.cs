@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Dib.Hagelkorn.Test
+namespace Hagelkorn.Test
 {
     [TestClass]
     public class TestHagelSource

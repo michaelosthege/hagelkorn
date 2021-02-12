@@ -39,7 +39,7 @@ dotnet-test:
   stage: test
   image: microsoft/dotnet
   script:
-    - cd Dib.Hagelkorn.Tests
+    - cd Hagelkorn.Tests
     - dotnet test
 
 dotnet-release:
@@ -47,7 +47,7 @@ dotnet-release:
   image: microsoft/dotnet
   script:
     - dotnet build --configuration Release
-    - cp Dib.Hagelkorn/bin/Release/*.nupkg .
+    - cp Hagelkorn/bin/Release/*.nupkg .
   artifacts:
     paths:
       - ./*.nupkg

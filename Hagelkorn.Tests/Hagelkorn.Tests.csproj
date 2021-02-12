@@ -5,9 +5,9 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>Dib.Hagelkorn.Tests</RootNamespace>
+    <RootNamespace>Hagelkorn.Tests</RootNamespace>
 
-    <AssemblyName>Dib.Hagelkorn.Tests</AssemblyName>
+    <AssemblyName>Hagelkorn.Tests</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dib.Hagelkorn\Dib.Hagelkorn.csproj" />
+    <ProjectReference Include="..\Hagelkorn\Hagelkorn.csproj" />
   </ItemGroup>
 
 </Project>

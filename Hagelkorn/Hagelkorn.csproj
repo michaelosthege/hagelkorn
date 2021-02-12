@@ -5,14 +5,17 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Michael Osthege</Authors>
     <Company>Forschungszentrum Jülich GmbH</Company>
-    <Product />
+    <Product>Hagelkorn</Product>
     <Version>1.1.1</Version>
     <AssemblyVersion>1.1.1.0</AssemblyVersion>
     <FileVersion>1.1.1.0</FileVersion>
+    <PackageId>Hagelkorn</PackageId>
+    <AssemblyName>Hagelkorn</AssemblyName>
+    <RootNamespace>Hagelkorn</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.0\Dib.Hagelkorn.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\Hagelkorn.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

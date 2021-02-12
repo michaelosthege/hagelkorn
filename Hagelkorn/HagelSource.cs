@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Dib.Hagelkorn
+namespace Hagelkorn
 {
     /// <summary>
     /// An ID-generator that exposes some internal parameters.
@@ -29,7 +29,7 @@ namespace Dib.Hagelkorn
         /// <param name="alphabet">the (sorted) characters to be used in the ID generation</param>
         /// <param name="start">beginning of timeline</param>
         /// <param name="overflow_years">number of years after which the key length will increase by 1</param>
-        public HagelSource(double resolution=Dib.Hagelkorn.Resolution.Seconds, string alphabet = DEFAULT_ALPHABET, DateTime? start=null, double overflow_years=10)
+        public HagelSource(double resolution=Hagelkorn.Resolution.Seconds, string alphabet = DEFAULT_ALPHABET, DateTime? start=null, double overflow_years=10)
         {
             if (start == null)
                 start = DEFAULT_START;
@@ -68,7 +68,7 @@ namespace Dib.Hagelkorn
         /// <param name="start">beginning of timeline</param>
         /// <param name="overflow_years">number of years after which the key length will increase by 1</param>
         /// <returns></returns>
-        public static string Hagelkorn(double resolution = Dib.Hagelkorn.Resolution.Seconds, DateTime? now=null, string alphabet = DEFAULT_ALPHABET, DateTime? start = null, double overflow_years = 10)
+        public static string Monotonic(double resolution = Hagelkorn.Resolution.Seconds, DateTime? now=null, string alphabet = DEFAULT_ALPHABET, DateTime? start = null, double overflow_years = 10)
         {
             // clean up input arguments
             DateTime n;

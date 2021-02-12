@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2000
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "hagelkorn", "hagelkorn\hagelkorn.pyproj", "{FB6FAB3C-98F7-4579-8EEF-DA8DA24FF6A6}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "pyhagelkorn", "pyhagelkorn\pyhagelkorn.pyproj", "{FB6FAB3C-98F7-4579-8EEF-DA8DA24FF6A6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1813558-B955-41CA-8751-C02C696BFBDE}"
 	ProjectSection(SolutionItems) = preProject
@@ -12,9 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		requirements.txt = requirements.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dib.Hagelkorn", "Dib.Hagelkorn\Dib.Hagelkorn.csproj", "{B5F2F4F9-EA30-41DE-BA00-0C963F1D6882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hagelkorn", "Hagelkorn\Hagelkorn.csproj", "{B5F2F4F9-EA30-41DE-BA00-0C963F1D6882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dib.Hagelkorn.Tests", "Dib.Hagelkorn.Tests\Dib.Hagelkorn.Tests.csproj", "{874D9203-51CD-46E4-B04C-E6F7D60D7AFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hagelkorn.Tests", "Hagelkorn.Tests\Hagelkorn.Tests.csproj", "{874D9203-51CD-46E4-B04C-E6F7D60D7AFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
