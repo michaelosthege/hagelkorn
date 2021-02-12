@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Dib.Hagelkorn.Test
+namespace Hagelkorn.Test
 {
     [TestClass]
     public class TestHagelSourceFunctions
@@ -40,7 +40,7 @@ namespace Dib.Hagelkorn.Test
         [TestMethod]
         public void TestMonotonic()
         {
-            string id = HagelSource.Hagelkorn(
+            string id = HagelSource.Monotonic(
                 resolution: Resolution.Days,
                 now: new DateTime(2018, 12, 31, 23, 59, 59, DateTimeKind.Utc),
                 alphabet: "0123456789",
@@ -57,7 +57,7 @@ namespace Dib.Hagelkorn.Test
             var hs = new HagelSource();
             var now = DateTime.Now;
             string hs_monotonic = hs.Monotonic(now);
-            string hs_hagelkorn = HagelSource.Hagelkorn(now: now);
+            string hs_hagelkorn = HagelSource.Monotonic(now: now);
             Assert.AreEqual(hs_monotonic, hs_hagelkorn);
         }
 
