@@ -1,5 +1,5 @@
-[![PyPI version](https://badge.fury.io/py/hagelkorn.svg)](https://badge.fury.io/py/hagelkorn)
-![Nuget](https://img.shields.io/nuget/v/hagelkorn)
+[![PyPI version](https://img.shields.io/pypi/v/hagelkorn)](https://pypi.org/project/hagelkorn)
+[![NuGet](https://img.shields.io/nuget/v/hagelkorn)](https://nuget.org/packages/Hagelkorn)
 [![pipeline](https://github.com/michaelosthege/hagelkorn/workflows/pipeline/badge.svg)](https://github.com/michaelosthege/hagelkorn/actions)
 [![coverage](https://codecov.io/gh/michaelosthege/hagelkorn/branch/master/graph/badge.svg)](https://codecov.io/gh/michaelosthege/hagelkorn)
 
