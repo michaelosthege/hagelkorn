@@ -73,7 +73,7 @@ def base(n: float, alphabet: str, digits: int) -> str:
     B = len(alphabet)
     output = ""
     while n > 0:
-        output += alphabet[n % B]
+        output += alphabet[int(n) % B]
         n = n // B
     return output[::-1].rjust(digits, alphabet[0])
 

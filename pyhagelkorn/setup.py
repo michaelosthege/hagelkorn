@@ -40,5 +40,6 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Intended Audience :: Developers",
     ],
+    package_data={"hagelkorn": ["py.typed"]},
     install_requires=[],
 )
