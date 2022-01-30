@@ -24,7 +24,7 @@ setup(
     name=__packagename__,
     packages=[__packagename__],  # this must be the same as the name above
     version=__version__,
-    description="Implements an algorithm to generate alphanumeric IDs that increase monotonically with time.",
+    description="Generates alphanumeric IDs that increase monotonically with time.",
     url="https://github.com/michaelosthege/hagelkorn",
     download_url="https://github.com/michaelosthege/hagelkorn/tarball/%s" % __version__,
     author="Michael Osthege",
@@ -37,6 +37,7 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "Intended Audience :: Developers",
     ],
     install_requires=[],
