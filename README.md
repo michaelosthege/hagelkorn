@@ -2,6 +2,7 @@
 [![NuGet](https://img.shields.io/nuget/v/hagelkorn)](https://nuget.org/packages/Hagelkorn)
 [![pipeline](https://github.com/michaelosthege/hagelkorn/workflows/pipeline/badge.svg)](https://github.com/michaelosthege/hagelkorn/actions)
 [![coverage](https://codecov.io/gh/michaelosthege/hagelkorn/branch/master/graph/badge.svg)](https://codecov.io/gh/michaelosthege/hagelkorn)
+[![DOI](https://zenodo.org/badge/338276869.svg)](https://zenodo.org/badge/latestdoi/338276869)
 
 # Hagelkorn
 This is a package for generating human-readable and human-memorable IDs.
